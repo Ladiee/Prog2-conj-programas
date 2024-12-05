@@ -3,26 +3,26 @@ package pkg_calculadora;
 import java.util.Scanner;
 
 public class Calculadora {
-    float n1, n2;
-	int op;
-
-    public void menu(){
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("________MENU________");
-        String string = """
-                1 - Soma
-                2 - Subtração
-                3 - Multiplicação
-                4 - Divisão
-                5 - Piso
-                6 - Teto
-                7 - Raiz quadrada
-                8 - Potência quadrática
-                Escolha uma operação: """;
-        System.out.println(string);
-
-        op = input.nextInt();  
+    static float n1, n2;
+	static int op;
+    
+        public static void menu(){
+            Scanner input = new Scanner(System.in);
+    
+            System.out.println("________MENU________");
+            String string = """
+                    1 - Soma
+                    2 - Subtração
+                    3 - Multiplicação
+                    4 - Divisão
+                    5 - Piso
+                    6 - Teto
+                    7 - Raiz quadrada
+                    8 - Potência quadrática
+                    Escolha uma operação: """;
+            System.out.println(string);
+    
+            op = input.nextInt();  
         
         if (op == 0) {
             System.err.println("Encerrando Programa!");
