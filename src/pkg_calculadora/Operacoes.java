@@ -43,9 +43,9 @@ public class Operacoes {
         return res;
     }
 
-    public static boolean div_int(float n1, float n2){
-        boolean res = (n1%n2==0);
-        return res;
+    public static int div_int(float n1, float n2){
+        double res = (n1/n2);
+        return (int) res;
     }
     
     public static float resto_div(float n1, float n2){
