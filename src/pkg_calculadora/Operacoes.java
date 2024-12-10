@@ -1,7 +1,7 @@
 package pkg_calculadora;
 
 public class Operacoes {
-    public float n1, n2;
+    //public float n1, n2;
 
     public static float somar(float n1, float n2){ 
         float result = n1+n2;
