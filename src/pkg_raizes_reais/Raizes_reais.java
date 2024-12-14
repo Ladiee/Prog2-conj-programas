@@ -4,7 +4,7 @@ public class Raizes_reais {
     static float a, b, c;
 
     public static void tratamento_expre(String exp) {
-        
+
         
     }
 
