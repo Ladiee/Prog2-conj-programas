@@ -99,58 +99,5 @@ public class conversor {
 
                 }
 
-        } while (op!=0);
-                /*op = input.nextInt();  
-            
-                if (op == 0) {
-                    System.err.println("Encerrando Programa!");
-
-                } else if (op>=1 && op<=9) {
-                    System.out.println("Informe os valores:");
-                    try {
-                        n1 = input.nextFloat();
-                        n2 = input.nextFloat();
-                        switch (op) {
-                            case 1 -> System.out.println(pkg_conversor.conversoes.somar(n1,n2));
-                            case 2 -> System.out.println(pkg_conversor.conversoes.subtrair(n1,n2));
-                            case 3 -> System.out.println(pkg_conversor.conversoes.multiplicar(n1, n2));
-                            case 4 -> System.out.println(pkg_conversor.conversoes.dividir(n1, n2));
-                            case 5 -> System.out.println(pkg_conversor.conversoes.Expo(n1,n2));
-                            case 6 -> System.out.println(pkg_conversor.conversoes.div_int(n1, n2));
-                            case 7 -> System.out.println(pkg_conversor.conversoes.resto_div(n1, n2));
-                            case 8 -> System.out.println(pkg_conversor.conversoes.arranjo(n1, n2));
-                            case 9 -> System.out.println(pkg_conversor.conversoes.raiz_grau_n(n1, n2));
-                        }
-                    } catch (ArithmeticException e) {
-                        System.out.println("Algo deu errado! Tente novamente.");
-                    } catch (Exception e){
-                        System.out.println("Algo deu errado! Tente novamente.");
-                    }
-
-                } else if (op>9 && op <=15){
-                    System.out.println("Informe o valor:");
-                    try {
-                        n1 = input.nextFloat();
-                        switch(op){
-                            case 10 -> System.out.println(pkg_conversor.conversoes.fatorial(n1));
-                            case 11 -> System.out.println(pkg_conversor.conversoes.fatorial(n1));
-                            case 12 -> System.out.println(pkg_conversor.conversoes.piso(n1));
-                            case 13 -> System.out.println(pkg_conversor.conversoes.teto(n1));
-                            case 14 -> System.out.println(pkg_conversor.conversoes.valida_primos(n1));
-                            case 15 -> System.out.println(pkg_conversor.conversoes.quadrado_perfeito(n1));
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Algo deu errado! Tente novamente.");
-                    }
-                } else {
-                    System.out.println("Opção não encontrada!");
-                }
-            }while (op!=0);
-
-    public double static c_to_f (){
-
-    }
-    */
-
-    
+        } while (op!=0)
 }
