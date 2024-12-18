@@ -1,7 +1,7 @@
 package pkg_conversor;
 
 public class conversoes {
-    //Temperaturas
+    //Temperaturas - Okay
     public static double c_f (float t){
         return (t*(9/5)+32);
     }
@@ -29,49 +29,111 @@ public class conversoes {
     //Moedas
     
 
-    //Comprimentos
-    public static double m_cm (float m){
+    //Comprimentos - okay
+    public static double m_cm (double m){
         return m*100;
     }
 
-    public static double cm_m (float m){
-        return m/100;
-    }
-
-    public static double m_mm (float m){
+    public static double m_mm (double m){
         return m*1000;
     }
 
-    public static double mm_m (float m){
+    public static double m_pol (double m){
+        return m*39.37;
+    }
+
+    public static double m_pes (double m){
+        return m*3.28084;
+    } //Aqui acabou os metros
+
+    public static double mm_m (double m){
         return m/1000;
     }
 
-    public static double cm_pes (float m){
+    public static double mm_cm (double m){
+        return m_cm(mm_m(m));
+    }
+
+    public static double mm_pes (double m){
+        return m_pes(mm_m(m));
+    }
+
+    public static double mm_pol (double m){
+        return m_pol(mm_m(m));
+    }
+
+    public static double cm_m (double m){
+        return m/100;
+    }
+
+    public static double cm_mm (double m) {
+        return m_mm(cm_m(m));
+    }
+
+    public static double cm_pol (double m){
+        return m_pol(cm_m(m));
+    }
+
+    public static double cm_pes (double m){
         return m/30.48;
     }
 
-    public static double pol_pes (float m){
+    public static double pes_m (double m){
+        return m/3.28084;
+    }
+
+    public static double pes_mm (double m){
+        return m_mm(pes_m(m));
+    }
+
+    public static double pes_cm (double m){
+        return m_cm(pes_m(m));
+    }
+
+    public static double pes_pol (double m){
+        return m*12;
+    }
+
+    public static double pol_m (double m){
+        return m/39.37;
+    }
+
+    public static double pol_mm (double m){
+        return m_mm(pol_m(m));
+    }
+
+    public static double pol_cm (double m){
+        return m_cm(pol_m(m));
+    }
+
+    public static double pol_pes (double m){
         return m/12;
-    }
-    public static double cm_pol (float m){
-        return 
-    }
+    } 
 
-
-    //Massas
-    public static double kg_g (float q){
+    //Massas - okay
+    public static double kg_g (double q){
         return q*1000;
     }
 
-    public static double g_kg (float q){
+    public static double g_kg (double q){
         return q/1000;
     }
 
-    public static double g_lib (float q){
-        return q/0.45359237;
+    public static double g_lib (double q){
+        return q*0.0022046;
     }
 
-    public static double lib_g (float q){
-        return q/0.45359237;
+    public static double lib_g (double q){
+        return q/0.0022046;
     }
+
+    public static double kg_lib (double q){
+        return g_lib(kg_g(q));
+    }
+
+    public static double lib_kg (double q){
+        return g_kg(lib_g(q));
+    }
+
+
 }

@@ -19,10 +19,13 @@ public class conversor {
 
                 op = input.nextInt();
 
+                //Menus
                 if (op == 0) {
                     System.err.println("Saindo do menu do conversor!");
+                }
 
-                } else if (op==1) {
+                //Se  temperatura for escolhida
+                else if (op==1) {
                     String string2 = """
                             1 - Celsius -> Fahrenheit
                             2 - Celsius -> Kelvin
@@ -52,9 +55,14 @@ public class conversor {
                     } catch (Exception e){
                         System.out.println("Algo deu errado! Tente novamente.");
                     }
-                } else if (op==2){
+
+                }
+                
+                else if (op==2){
                     System.out.println("Ainda não está pronto :)");
-                } else if (op==3){
+                }
+                
+                else if (op==3){
                     String string2 = """
                             1 - Metros -> Centímetros
                             2 - Metros -> Milímetros
@@ -82,22 +90,71 @@ public class conversor {
                     System.out.println("Informe a opção: ");
                     op2 = input.nextInt();
 
+
+                    System.out.println("Informe o valor: ");
+                    try {
+                        double n = input.nextDouble();
+                        switch (op2) {
+                            case 1 -> System.out.println(pkg_conversor.conversoes.m_cm(n));
+                            case 2 -> System.out.println(pkg_conversor.conversoes.m_mm(n));
+                            case 3 -> System.out.println(pkg_conversor.conversoes.m_pol(n));
+                            case 4 -> System.out.println(pkg_conversor.conversoes.m_pes(n));
+                            case 5 -> System.out.println(pkg_conversor.conversoes.cm_m(n));
+                            case 6 -> System.out.println(pkg_conversor.conversoes.cm_mm(n));
+                            case 7 -> System.out.println(pkg_conversor.conversoes.cm_pol(n));
+                            case 8 -> System.out.println(pkg_conversor.conversoes.cm_pes(n));
+                            case 9 -> System.out.println(pkg_conversor.conversoes.mm_m(n));
+                            case 10 -> System.out.println(pkg_conversor.conversoes.mm_cm(n));
+                            case 11 -> System.out.println(pkg_conversor.conversoes.mm_pol(n));
+                            case 12 -> System.out.println(pkg_conversor.conversoes.mm_pes(n));
+                            case 13 -> System.out.println(pkg_conversor.conversoes.pol_m(n));
+                            case 14 -> System.out.println(pkg_conversor.conversoes.pol_cm(n));
+                            case 15 -> System.out.println(pkg_conversor.conversoes.pol_mm(n));
+                            case 16 -> System.out.println(pkg_conversor.conversoes.pol_pes(n));
+                            case 17 -> System.out.println(pkg_conversor.conversoes.pes_m(n));
+                            case 18 -> System.out.println(pkg_conversor.conversoes.pes_cm(n));
+                            case 19 -> System.out.println(pkg_conversor.conversoes.pes_mm(n));
+                            case 20 -> System.out.println(pkg_conversor.conversoes.pes_pol(n));
+                        }
+                    } catch (ArithmeticException e) {
+                        System.out.println("Algo deu errado! Tente novamente.");
+                    } catch (Exception e){
+                        System.out.println("Algo deu errado! Tente novamente.");
+                    }
+                }
+
+                else if (op==4) {
+                    String string2 = """
+                            1 - Kg -> Gramas
+                            2 - Kg -> Libras
+                            3 - Gramas -> Kg
+                            4 - Gramas -> Libras
+                            5 - Libras -> Kg
+                            6 - Libras -> Gramas
+                            Escolha uma opção: """;
+                    System.out.println(string2);
+
+                    System.out.println("Informe a opção: ");
+                    op2 = input.nextInt();
+
                     System.out.println("Informe o valor: ");
                     try {
                         float n = input.nextFloat();
                         switch (op2) {
-                            case 1 -> System.out.println(pkg_conversor.conversoes.m_cm(n));
-                            case 2 -> System.out.println(pkg_conversor.conversoes.m_mm(n));
-                            case 3 -> System.out.println(pkg_conversor.conversoes.cm_pes((m_cm(n)));
-                            case 4 -> System.out.println(pkg_conversor.conversoes.f_k(n));
-                            case 5 -> System.out.println(pkg_conversor.conversoes.k_c(n));
-                            case 6 -> System.out.println(pkg_conversor.conversoes.k_f(n));
+                            case 1 -> System.out.println(pkg_conversor.conversoes.kg_g(n));
+                            case 2 -> System.out.println(pkg_conversor.conversoes.kg_lib(n));
+                            case 3 -> System.out.println(pkg_conversor.conversoes.g_kg(n));
+                            case 4 -> System.out.println(pkg_conversor.conversoes.g_lib(n));
+                            case 5 -> System.out.println(pkg_conversor.conversoes.lib_kg(n));
+                            case 6 -> System.out.println(pkg_conversor.conversoes.lib_g(n));
                         }
                     } catch (ArithmeticException e) {
                         System.out.println("Algo deu errado! Tente novamente.");
+                    } catch (Exception e){
+                        System.out.println("Algo deu errado! Tente novamente.");
                     }
-
                 }
-
-        } while (op!=0)
+            } while (op!=0);
+        }
+    }
 }
