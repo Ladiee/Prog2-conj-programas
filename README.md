@@ -1,5 +1,12 @@
 ## Folder Structure
 
+Primeiro trabalho da disciplina Programação II
+Neste trabalho deve-se programar:
+- Uma calculadora;
+- Um conversor de temperatura, moedas, comprimento e massa;
+- Um descobridor de raízes reais de equações do segundo grau;
+- E um validador de CPF.
+
 The workspace contains two folders by default, where:
 
 - `src`: the folder to maintain sources
