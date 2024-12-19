@@ -14,6 +14,7 @@ public class conversor {
                         2 - Moedas
                         3 - Comprimento
                         4 - Massa
+                        0 - Sair do menu
                         Escolha uma operação: """;
                 System.out.println(string);
 
@@ -50,8 +51,6 @@ public class conversor {
                             case 5 -> System.out.println(pkg_conversor.conversoes.k_c(n));
                             case 6 -> System.out.println(pkg_conversor.conversoes.k_f(n));
                         }
-                    } catch (ArithmeticException e) {
-                        System.out.println("Algo deu errado! Tente novamente.");
                     } catch (Exception e){
                         System.out.println("Algo deu errado! Tente novamente.");
                     }
@@ -116,8 +115,6 @@ public class conversor {
                             case 19 -> System.out.println(pkg_conversor.conversoes.pes_mm(n));
                             case 20 -> System.out.println(pkg_conversor.conversoes.pes_pol(n));
                         }
-                    } catch (ArithmeticException e) {
-                        System.out.println("Algo deu errado! Tente novamente.");
                     } catch (Exception e){
                         System.out.println("Algo deu errado! Tente novamente.");
                     }
@@ -148,8 +145,6 @@ public class conversor {
                             case 5 -> System.out.println(pkg_conversor.conversoes.lib_kg(n));
                             case 6 -> System.out.println(pkg_conversor.conversoes.lib_g(n));
                         }
-                    } catch (ArithmeticException e) {
-                        System.out.println("Algo deu errado! Tente novamente.");
                     } catch (Exception e){
                         System.out.println("Algo deu errado! Tente novamente.");
                     }
