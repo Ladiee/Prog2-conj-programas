@@ -1,35 +1,35 @@
 package pkg_conversor;
 
-public class conversoes {
-    //Temperaturas - Okay
-    public static double c_f (float t){
+public class Conversoes {
+    //Temperaturas
+    public static double c_f (double t){
         return (t*(9/5)+32);
     }
 
-    public static double f_c (float t){
+    public static double f_c (double t){
         return ((t-32)*5/9);
     }
 
-    public static double c_k(float t){
+    public static double c_k(double t){
         return t+273.15;
     }
 
-    public static double k_c (float t){
+    public static double k_c (double t){
         return t-273.15;
     }
 
-    public static double k_f (float t){
+    public static double k_f (double t){
         return ((t-273.15)*9/5+32);
     }
 
-    public static double f_k (float t){
+    public static double f_k (double t){
         return ((t-32)*5/9+273.15);
     }
 
     //Moedas
     
 
-    //Comprimentos - okay
+    //Comprimentos
     public static double m_cm (double m){
         return m*100;
     }
@@ -44,7 +44,7 @@ public class conversoes {
 
     public static double m_pes (double m){
         return m*3.28084;
-    } //Aqui acabou os metros
+    }
 
     public static double mm_m (double m){
         return m/1000;
@@ -110,7 +110,7 @@ public class conversoes {
         return m/12;
     } 
 
-    //Massas - okay
+    //Massas
     public static double kg_g (double q){
         return q*1000;
     }
@@ -134,6 +134,4 @@ public class conversoes {
     public static double lib_kg (double q){
         return g_kg(lib_g(q));
     }
-
-
 }
