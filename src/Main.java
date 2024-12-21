@@ -4,13 +4,13 @@ public class Main {
         int op;
 
         do {
-            String s ="""
-            0 - Encerrar o programa        
-            1 - Calculadora
-            2 - Descobridor de raizes
-            3 - Conversor
-            4 - Validador de CPF
-            Escolha um programa:""";
+            String s = """
+                    0 - Encerrar o programa
+                    1 - Calculadora
+                    2 - Descobridor de raizes
+                    3 - Conversor
+                    4 - Validador de CPF
+                    Escolha um programa:""";
             System.out.println(s);
 
             op = pkg_calculadora.Calculadora.isInt();
@@ -23,7 +23,7 @@ public class Main {
                     pkg_calculadora.Calculadora.menu();
                     break;
                 case 2:
-                    System.out.println("Ainda não implementado completamente.");;
+                    pkg_raizes_reais.Raizes_reais_menu.menu();
                     break;
                 case 3:
                     pkg_conversor.Conversor.menu();
@@ -35,6 +35,6 @@ public class Main {
                     System.out.println("Opção não encontrada!");
                     throw new AssertionError();
             }
-        }while (op !=0);
+        } while (op != 0);
     }
 }
