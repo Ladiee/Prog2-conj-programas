@@ -2,9 +2,9 @@ package pkg_conversor;
 
 public class Conversor {
     static int op, op2;
-    
-    public static void menu(){
-        do { 
+
+    public static void menu() {
+        do {
             System.out.println("________MENU________");
             String string = """
                     0 - Sair do conversor
@@ -17,12 +17,12 @@ public class Conversor {
 
             op = pkg_calculadora.Calculadora.isInt();
 
-            //Menus
+            // Menus
             if (op == 0) {
                 System.err.println("Encerrando o conversor!");
             }
 
-            else if (op==1) {//menu temperatura
+            else if (op == 1) {// menu temperatura
                 String string2 = """
                         1 - Celsius -> Fahrenheit
                         2 - Celsius -> Kelvin
@@ -47,17 +47,19 @@ public class Conversor {
                         case 5 -> System.out.println(pkg_conversor.Conversoes.k_c(n));
                         case 6 -> System.out.println(pkg_conversor.Conversoes.k_f(n));
                     }
-                } catch (Exception e){
+                } catch (Exception e) {
                     System.out.println("Algo deu errado! Tente novamente.");
                 }
 
             }
-            
-            else if (op==2){
-                System.out.println("Ainda não está pronto :)");
+
+            else if (op == 2) {
+                ConversorMoeda c = new ConversorMoeda();
+
+                System.out.println(c.conversorMoeda());
             }
-            
-            else if (op==3){ //menu dos comprimentos
+
+            else if (op == 3) { // menu dos comprimentos
                 String string2 = """
                         1 - Metros -> Centímetros
                         2 - Metros -> Milímetros
@@ -85,7 +87,6 @@ public class Conversor {
                 System.out.println("Informe a opção: ");
                 op2 = pkg_calculadora.Calculadora.isInt();
 
-
                 System.out.println("Informe o valor: ");
                 try {
                     double n = pkg_calculadora.Calculadora.isDouble();
@@ -111,12 +112,12 @@ public class Conversor {
                         case 19 -> System.out.println(pkg_conversor.Conversoes.pes_mm(n));
                         case 20 -> System.out.println(pkg_conversor.Conversoes.pes_pol(n));
                     }
-                } catch (Exception e){
+                } catch (Exception e) {
                     System.out.println("Algo deu errado! Tente novamente.");
                 }
             }
 
-            else if (op==4) {//Menu de massa
+            else if (op == 4) {// Menu de massa
                 String string2 = """
                         1 - Kg -> Gramas
                         2 - Kg -> Libras
@@ -141,12 +142,11 @@ public class Conversor {
                         case 5 -> System.out.println(pkg_conversor.Conversoes.lib_kg(n));
                         case 6 -> System.out.println(pkg_conversor.Conversoes.lib_g(n));
                     }
-                } catch (Exception e){
+                } catch (Exception e) {
                     System.out.println("Algo deu errado! Tente novamente.");
                 }
-            }
-            else
+            } else
                 System.out.println("Opção não encontrada!");
-        } while (op!=0);
+        } while (op != 0);
     }
 }
