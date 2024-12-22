@@ -23,6 +23,7 @@ public class Raizes_reais_menu {
                 System.out.println();
                 break;
             } else if (op.equals("1")) {
+                System.out.println("Digite a equação no formato ax^2 + bx + c");
                 System.out.print("Digite a equação: ");
                 String exp = saida.nextLine();
                 System.out.println();
