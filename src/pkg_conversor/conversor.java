@@ -56,7 +56,9 @@ public class Conversor {
             else if (op == 2) {
                 ConversorMoeda c = new ConversorMoeda();
 
-                System.out.println(c.conversorMoeda());
+                double resultado = c.conversorMoeda();
+
+                System.out.println("Valor convertido: " + resultado);
             }
 
             else if (op == 3) { // menu dos comprimentos

@@ -11,7 +11,8 @@ public class ConversorMoeda {
     }
 
     public double conversorMoeda() { // Input do usuário para saber em que estado está o dinheiro
-        try (Scanner input = new Scanner(System.in)) {
+        try {
+            Scanner input = new Scanner(System.in);
             System.out.println("________MENU________");
             String string = """
                     O valor está em:
@@ -53,6 +54,8 @@ public class ConversorMoeda {
         } catch (Exception e) {
             System.out.println("Algo deu errado! Tente novamente.");
         }
+
+        System.out.println("Valor: " + this.valor);
 
         double retorno = 0;
         if (this.estadoAtual.equals("d")) {
