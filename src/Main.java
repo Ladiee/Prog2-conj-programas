@@ -29,7 +29,7 @@ public class Main {
                     pkg_conversor.Conversor.menu();
                     break;
                 case 4:
-                    System.out.println("Ainda não imprementado :)");
+                    pkg_validador_cpf.Menu_cpf.menu_cpf();
                     break;
                 default:
                     System.out.println("Opção não encontrada!");
