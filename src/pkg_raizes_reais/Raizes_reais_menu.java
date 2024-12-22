@@ -20,6 +20,7 @@ public class Raizes_reais_menu {
 
             if (op.equals("2")) {
                 System.out.println("Saindo do menu de equações do segundo grau!");
+                System.out.println();
                 break;
             } else if (op.equals("1")) {
                 System.out.print("Digite a equação: ");
@@ -37,6 +38,6 @@ public class Raizes_reais_menu {
 
         }
 
-        saida.close();
+        // saida.close();
     }
 }
