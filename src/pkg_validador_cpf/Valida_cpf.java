@@ -26,17 +26,16 @@ public class Valida_cpf {
 		
 		//verifica se está nos conformes, se estiver faz a logica de verificação
 		boolean cpf_valido = verifica_cpf_inteiro.find();
-		if (cpf_valido == true) { 
+		if (cpf_valido == false) {
+			//se não estiver no formato inteiro testa o formato sem caracteres especiais
+			cpf_valido = verifica_cpf.find();
+			if (cpf_valido == false) {
+				System.out.println("Formato inválido de cpf.");
+			} else{
+				validador_de_cpf_n10(cpf);
+			}
+		}else{
 			validador_de_cpf_n10(cpf);
-		}
-		
-		//se não estiver no formato inteiro testa o formato sem caracteres especiais
-		cpf_valido = verifica_cpf.find();
-		if(cpf_valido == true) {
-			validador_de_cpf_n10(cpf);
-		} 
-		else {
-			System.out.println("Formato inválido de cpf.");
 		}
 	}
 	
@@ -77,17 +76,6 @@ public class Valida_cpf {
 		
 		//Caso o cpf venha com caracteres eles seráo retirados
 		String cpf_novo = cpf.replaceAll("\\.|\\-","");
-		
-		//Casos invalidos, falsos verdadeiros
-		if( cpf_novo.equals("00000000000")||cpf_novo.equals("11111111111")||
-			cpf_novo.equals("22222222222")||cpf_novo.equals("33333333333")||
-			cpf_novo.equals("44444444444")||cpf_novo.equals("55555555555")||
-			cpf_novo.equals("66666666666")||cpf_novo.equals("77777777777")||
-			cpf_novo.equals("88888888888")||cpf_novo.equals("99999999999")||
-			cpf_novo.equals("01234567890")){
-			System.out.println("Cpf inválido");
-			return false;
-		}
 		
 		//laço de repetição para multiplicar os digitos pelos seus respectivos pesos
 		for(int i=0; i<(cpf_novo.length()-2);i++) {
